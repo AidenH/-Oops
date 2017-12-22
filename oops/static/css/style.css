@@ -15,7 +15,7 @@ body {
 
   background-color: rgb(126, 217, 156);
   color: rgb(63, 80, 68);
-  box-shadow: 0px .2px 20px rgba(60, 151, 90, 256);
+  box-shadow: 0px 0.2px 20px rgb(60, 151, 90);
 }
 
 #header_title_text {
@@ -29,8 +29,46 @@ body {
 #header_control_text {
   position: relative;
   float: right;
-  top: 45%;
+  top: 40%;
   width: 12%;
 
   font-size: 2vh;
+}
+
+#footer {
+  position: absolute;
+  height: 6%;
+  width: 100%;
+  bottom: 0;
+  margin: auto;
+
+  background-color: rgb(126, 217, 156);
+  color: rgb(63, 80, 68);
+  box-shadow: 0px -0.2px 20px rgb(60, 151, 90);
+}
+
+#footer_text {
+  position: relative;
+  width: 10%;
+  top: 35%;
+  margin-left: 30px;
+
+  font-size: 1.4vh;
+  font-weight: normal;
+}
+
+div.tile {
+  float: left;
+}
+
+.tile {
+  background-color: #fdfdfd;
+  width: 25em;
+  height: 28em;
+  margin: 1em;
+  padding: 1em;
+  top: 18%;
+  z-index: -1;
+  border-radius: 10px;
+  overflow-y: auto;
 }
