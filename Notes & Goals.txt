@@ -1,8 +1,7 @@
 Small/daily goals:
 
--fix stubborn "position: absolute;" in tile css class
--rework tiles css to better position tiles after above problem is solved
-
+DONE -rework tiles css to better position tiles after above problem is solved
+DONE -fix stubborn "position: absolute;" in tile css class
 DONE -add proper font scaling inside header div
 DONE -header div drop shadow
 DONE -remove div overflow right of main view
@@ -10,12 +9,12 @@ DONE -remove div overflow right of main view
 
 Big goals:
 
--add first to do tile
+-add first to do tile - DONE
 	-add functionality to it
 		-scrolled overflow
 		-custom scroll bar
-	-add more tiles
+	-add more tiles - DONE
 	-add movement & interaction between tiles
--populate footer
+-populate footer - DONE
 -implement user accounts & associated tiles
 -clean up site design
