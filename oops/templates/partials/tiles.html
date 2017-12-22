@@ -1,4 +1,4 @@
-<div id="tile_container">
+<!--<div id="tile_container">
   <div class="tile">
     -Dinner with Diane, Sun @ 4<br>
     -Xmas shopping Wed.<br>
@@ -7,14 +7,18 @@
   <div class="tile">
     -debugging on Friday
   </div>
+</div>-->
+
+<div id="tile_container">
+  {% for tile in tileindex %}
+    {% if forloop.last %}
+      <span class="tile" style="margin-right: 1em;">
+        test {{ tile }}
+      </span>
+    {% else %}
+      <span class="tile">
+        test {{ tile }}
+      </span>
+    {% endif %}
+  {% endfor %}
 </div>
-
-<!--
-
-Add soon:
-
-{% for tile in tileindex %}
-  <div class="tile">
-    <p> {{ tile }}
-  </div>
-{% endfor %}-->

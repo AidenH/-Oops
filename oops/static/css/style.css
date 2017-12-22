@@ -6,6 +6,7 @@ body, html {
 body {
   background-color: rgb(179, 232, 197);
   font-family: "arial";
+  overflow: hidden;
 }
 
 #header {
@@ -57,17 +58,26 @@ body {
   font-weight: normal;
 }
 
+#tile_container {
+  overflow-x: scroll;
+  padding-top: 9.1%;
+  padding-bottom: 4%;
+  margin-left: 0.2em;
+  white-space: nowrap;
+}
+
 div.tile {
   float: left;
 }
 
 .tile {
+  display: inline-block;
   background-color: #fdfdfd;
-  width: 25em;
+  width: 24em;
   height: 28em;
-  margin: 1em;
+  margin-left: 0.8em;
+  margin-top: 1em;
   padding: 1em;
-  top: 18%;
   z-index: -1;
   border-radius: 10px;
   overflow-y: auto;
