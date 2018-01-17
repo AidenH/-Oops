@@ -1,13 +1,18 @@
 <div id="tile_container">
-  {% for tile in tileindex %}
+  {% for tile in tileindex reversed %}
     {% if forloop.last %}
       <span class="tile" style="margin-right: 1em;">
     {% else %}
       <span class="tile">
     {% endif %}
-      <div class="tile_title">{{ tile_title }}</div>
-      <div class="tile_date">{{ tile_date }}</div>
-      <p>{{ tile_content }}
+      <div class="tile_title">{{ tile.title }}</div>
+      <div class="tile_date">{{ tile.date }}</div>
+      <p id="{{ tile.id }}" onclick="tileEditable({{ tile.id }})">{{ tile.content }}</p>
+      <script>
+        function tileEditable(id) {
+          document.getElementById(id).contentEditable = true;
+        }
+      </script>
     </span>
   {% endfor %}
 </div>
