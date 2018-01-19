@@ -1,18 +1,37 @@
 <div id="tile_container">
   {% for tile in tileindex reversed %}
+
     {% if forloop.last %}
       <span class="tile" style="margin-right: 1em;">
     {% else %}
       <span class="tile">
     {% endif %}
-      <div class="tile_title">{{ tile.title }}</div>
+
       <div class="tile_date">{{ tile.date }}</div>
-      <p id="{{ tile.id }}" onclick="tileEditable({{ tile.id }})">{{ tile.content }}</p>
-      <script>
+      <div class="tile_title">{{ tile.title }}</div>
+      <p id="{{ tile.id }}" onclick="tileEditable({{ tile.id }})" oninput="tileUpdate({{ tile.id }})">
+          {{ tile.content }}</p>
+
+      <script type="text/javascript">
         function tileEditable(id) {
           document.getElementById(id).contentEditable = true;
         }
+
+        function tileUpdate(tile_id = 0) {
+          var content_updated = document.getElementById(tile_id).innerHTML;
+          $.ajax({
+            url: "tile-update/",
+            data: {
+              'id': tile_id,
+              'content': content_updated
+            },
+            success: function() {
+              console.log("Ajax function success.")
+            }
+            });
+        }
       </script>
+
     </span>
   {% endfor %}
 </div>
