@@ -10,16 +10,16 @@ DONE -remove div overflow right of main view
 Big goals:
 
 -implement database searching functionality into tiles
-	-tile id's
-	-tile content filling based on id
-	-updating database based on user-updated tile content
+	DONE -tile ids
+	DONE -tile content filling based on id
+	DONE -updating database based on user-updated tile content
 	-what is the max length of tile content?
--add first to do tile - DONE
-	-add functionality to it
-		-scrolled overflow
-		-custom scroll bar
-	-add more tiles - DONE
-	-add movement & interaction between tiles
--populate footer - DONE
+DONE -add first to do tile
+-add new functionality to tiles
+	-scrolled overflow
+	-custom scroll bar
+DONE -add more tiles
+-add movement & interaction between tiles
+DONE -populate footer
 -implement user accounts & associated tiles
 -clean up site design
