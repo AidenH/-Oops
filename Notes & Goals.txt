@@ -9,8 +9,9 @@ DONE -remove div overflow right of main view
 
 Big goals:
 
+- add big plus sign to the right of tiles to insert another tile.
 DONE -remove string formatting of html tags fed into tiles.html from database
-	-fix weird &nbsp; issue?
+	DONE -fix weird &nbsp; issue?
 DONE -implement database searching functionality into tiles
 	DONE -tile ids
 	DONE -tile content filling based on id
@@ -25,3 +26,4 @@ DONE -add more tiles
 DONE -populate footer
 -implement user accounts & associated tiles
 -clean up site design
+-animated tile movement?

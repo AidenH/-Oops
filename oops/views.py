@@ -12,9 +12,12 @@ def index(request):
     return render_to_response('index.html', locals())
 
 def tile_update(request):
-    def strip_content(a):
-        out = a.replace(' ', '&nbsp;').replace('\n', '<br>')
-        return out
+
+    #Old strip function (for reference):
+    #
+    #def strip_content(a):
+        #out = a.replace(' ', '&nbsp;').replace('\n', '<br>')
+        #return out
 
     tile_id = request.GET["id"]
     content_updated = request.GET["content"]
@@ -25,7 +28,7 @@ def tile_update(request):
     try:
         print("Id: %s" % tile_id)
         print("Content: %s" % content_updated)
-        Tile.objects.filter(id=tile_id).update(content=strip_content(content_updated))
+        Tile.objects.filter(id=tile_id).update(content=content_updated) #strip_content would go here around content_updated
         return HttpResponse(status=200)
     except:
         return HttpResponse(status=403)
