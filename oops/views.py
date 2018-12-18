@@ -13,7 +13,7 @@ def index(request):
 
 def tile_update(request):
     def strip_content(a):
-        out = a.replace('&nbsp;', ' ').replace('<br>', '\n')
+        out = a.replace(' ', '&nbsp;').replace('\n', '<br>')
         return out
 
     tile_id = request.GET["id"]

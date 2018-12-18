@@ -10,7 +10,7 @@
       <div class="tile_date">{{ tile.date }}</div>
       <div class="tile_title">{{ tile.title }}</div>
       <p id="{{ tile.id }}" onclick="tileEditable({{ tile.id }})" oninput="tileUpdate({{ tile.id }})">
-          {{ tile.content }}</p>
+          {{ tile.content|safe }}</p>
 
       <script type="text/javascript">
         function tileEditable(id) {
@@ -27,7 +27,6 @@
             },
             success: function() {
               console.log("Ajax function success.");
-              console.log({{ tile.content }});
             }
             });
         }
