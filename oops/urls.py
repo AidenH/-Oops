@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^admin/', admin.site.urls),
     url(r'^tile-update/$', tile_update),
+    url(r'^tile-add/$', tile_add),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

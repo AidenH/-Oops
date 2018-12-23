@@ -32,3 +32,10 @@ def tile_update(request):
         return HttpResponse(status=200)
     except:
         return HttpResponse(status=403)
+
+def tile_add(request):
+    try:
+        
+        return HttpResponse(status=200)
+    except:
+        return HttpRespose(status=403)

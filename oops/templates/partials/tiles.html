@@ -30,8 +30,18 @@
             }
             });
         }
+
+        function addTile() {
+          $.ajax({
+            url: "tile-add/",
+            data: {
+
+            }
+          })
+        }
       </script>
 
     </span>
   {% endfor %}
+  <span class="plus" <!--onclick="addTile()"-->>Plus
 </div>
