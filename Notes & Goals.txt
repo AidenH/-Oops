@@ -9,7 +9,8 @@ DONE -remove div overflow right of main view
 
 Big goals:
 
-- add big plus sign to the right of tiles to insert another tile.
+-dates should update when tile contents update
+DONE -add big plus sign to the right of tiles to insert another tile.
 DONE -remove string formatting of html tags fed into tiles.html from database
 	DONE -fix weird &nbsp; issue?
 DONE -implement database searching functionality into tiles
@@ -18,7 +19,7 @@ DONE -implement database searching functionality into tiles
 	DONE -updating database based on user-updated tile content
 	-what is the max length of tile content?
 DONE -add first to do tile
--add new functionality to tiles
+-add new functionality to tiles:
 	-scrolled overflow
 	-custom scroll bar
 DONE -add more tiles
@@ -27,3 +28,4 @@ DONE -populate footer
 -implement user accounts & associated tiles
 -clean up site design
 -animated tile movement?
+-reorder tiles by dragging?
