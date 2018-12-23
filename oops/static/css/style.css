@@ -32,11 +32,11 @@ body {
 #header_control_text {
   position: relative;
   float: right;
-  top: 40%;
+  top: 30%;
   width: 30%;
   margin-right: 30px;
 
-  font-size: 2vh;
+  font-size: 1.8vh;
   text-align: right;
 }
 
@@ -74,12 +74,19 @@ body {
   white-space: nowrap;
 }
 
+.link {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 2em;
+}
+
 div.tile {
   float: left;
 }
 
 .tile {
   display: inline-block;
+  vertical-align: top;
   background-color: rgb(252, 252, 252);
   color: rgb(63, 80, 68);
   width: 24em;
@@ -103,6 +110,7 @@ div.tile {
 
 .tile_date {
   display: inline-block;
+  vertical-align: top;
   width: 93%;
 
   font-size: 0.6em;
@@ -111,6 +119,8 @@ div.tile {
 
 .plus {
   display: inline-block;
+  margin-top: 20em;
+  margin-left: 2em;
   color: rgb(63, 80, 68);
   width: 24em;
   cursor: pointer;
@@ -119,4 +129,5 @@ div.tile {
 .delete {
   display: inline-block;
   width: 1em;
+  cursor: pointer;
 }
