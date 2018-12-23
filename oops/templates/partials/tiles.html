@@ -9,8 +9,8 @@
     {% endif %}
 
       <div class="tile_date">{{ tile.date }}</div>
+      <img src="{% static 'img/delete.svg' %}" class="delete" onclick="deleteTile({{ tile.id }})"/>
       <div class="tile_title">{{ tile.title }}</div>
-      <img src="{% static 'img/delete.svg' %}" class="delete" onclick="console.log('Delete this.')"/>
       <p id="{{ tile.id }}" onclick="tileEditable({{ tile.id }})" oninput="tileUpdate({{ tile.id }})">
           {{ tile.content|safe }}</p>
 
@@ -34,11 +34,21 @@
         }
 
         function addTile() {
-          console.log("addTile")
+          console.log("addTile():")
           $.ajax({
             url: "tile-add/",
             success: function() {
               console.log("Add tile success.")
+            }
+          })
+        }
+
+        function deleteTile(tile_id) {
+          console.log("deleteTile():")
+          $.ajax({
+            url: "tile-delete/",
+            success: function() {
+              console.log("deleteTile activated.")
             }
           })
         }

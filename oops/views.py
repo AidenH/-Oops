@@ -12,13 +12,6 @@ def index(request):
     return render_to_response('index.html', locals())
 
 def tile_update(request):
-
-    #Old strip function (for reference):
-    #
-    #def strip_content(a):
-        #out = a.replace(' ', '&nbsp;').replace('\n', '<br>')
-        #return out
-
     tile_id = request.GET["id"]
     content_updated = request.GET["content"]
 
@@ -37,6 +30,12 @@ def tile_add(request):
     try:
         t = Tile(title="Title")
         t.save()
+        return HttpResponse(status=200)
+    except:
+        return HttpResponse(status=403)
+
+def tile_delete(request):
+    try:
         return HttpResponse(status=200)
     except:
         return HttpResponse(status=403)
