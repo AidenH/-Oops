@@ -9,7 +9,7 @@
     {% endif %}
 
       <div class="tile_date">{{ tile.date }}</div>
-      <img src="{% static 'img/delete.svg' %}" class="delete" onclick="deleteTile({{ tile.id }})"/>
+      <img src="{% static 'img/delete.svg' %}" class="delete" onclick="deleteTile({{ tile.id }})" alt="Delete tile" title="Delete this tile?"/>
       <div class="tile_title">{{ tile.title }}</div>
       <p id="{{ tile.id }}" onclick="tileEditable({{ tile.id }})" oninput="tileUpdate({{ tile.id }})">
           {{ tile.content|safe }}</p>
@@ -56,5 +56,6 @@
 
     </span>
   {% endfor %}
-  <span class="plus" onclick="addTile()">Plus</span>
+  <span class="plus" onclick="addTile()">
+    <img src="{% static 'img/add.svg' %}"</span>
 </div>
