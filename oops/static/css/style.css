@@ -95,12 +95,16 @@ div.tile {
 }
 
 .tile_title {
+  width: 93%;
+
   font-size: 2em;
   font-weight: bold;
   text-decoration: underline;
 }
 
 .tile_date {
+  width: 93%;
+
   font-size: 0.6em;
   line-height: 1em;
 }
@@ -110,4 +114,9 @@ div.tile {
   color: rgb(63, 80, 68);
   width: 24em;
   cursor: pointer;
+}
+
+.delete {
+  width: 1em;
+  margin-left: 95%;
 }

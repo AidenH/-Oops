@@ -35,7 +35,8 @@ def tile_update(request):
 
 def tile_add(request):
     try:
-        
+        t = Tile(title="Title")
+        t.save()
         return HttpResponse(status=200)
     except:
-        return HttpRespose(status=403)
+        return HttpResponse(status=403)

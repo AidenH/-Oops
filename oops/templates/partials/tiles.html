@@ -1,3 +1,4 @@
+{% load static %}
 <div id="tile_container">
   {% for tile in tileindex reversed %}
 
@@ -9,6 +10,7 @@
 
       <div class="tile_date">{{ tile.date }}</div>
       <div class="tile_title">{{ tile.title }}</div>
+      <img src="{% static 'img/delete.svg' %}" class="delete" onclick="console.log('Delete this.')"/>
       <p id="{{ tile.id }}" onclick="tileEditable({{ tile.id }})" oninput="tileUpdate({{ tile.id }})">
           {{ tile.content|safe }}</p>
 
@@ -26,16 +28,17 @@
               'content': content_updated
             },
             success: function() {
-              console.log("Ajax function success.");
+              console.log("Update success.");
             }
             });
         }
 
         function addTile() {
+          console.log("addTile")
           $.ajax({
             url: "tile-add/",
-            data: {
-
+            success: function() {
+              console.log("Add tile success.")
             }
           })
         }
@@ -43,5 +46,5 @@
 
     </span>
   {% endfor %}
-  <span class="plus" <!--onclick="addTile()"-->>Plus
+  <span class="plus" onclick="addTile()">Plus</span>
 </div>
