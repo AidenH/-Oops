@@ -1,31 +1,35 @@
 Small/daily goals:
 
+
+Big goals:
+
+-dates should update when tile contents update
+-what is the max length of tile content?
+-add new functionality to tiles:
+	-scrolled overflow
+	-custom scroll bar
+-add movement & interaction between tiles
+-implement user accounts & associated tiles
+-clean up site design
+-front end additions:
+	-animated tile movement
+	-reorder tiles by dragging
+
+
+Finished:
+
+DONE -populate footer
+DONE -add more tiles
+DONE -add first to do tile
+DONE -implement database searching functionality into tiles
+	DONE -tile ids
+	DONE -tile content filling based on id
+	DONE -updating database based on user-updated tile content
+DONE -add big plus sign to the right of tiles to insert another tile.
+DONE -remove string formatting of html tags fed into tiles.html from database
+	DONE -fix weird &nbsp; issue?
 DONE -rework tiles css to better position tiles after above problem is solved
 DONE -fix stubborn "position: absolute;" in tile css class
 DONE -add proper font scaling inside header div
 DONE -header div drop shadow
 DONE -remove div overflow right of main view
-
-
-Big goals:
-
--dates should update when tile contents update
-DONE -add big plus sign to the right of tiles to insert another tile.
-DONE -remove string formatting of html tags fed into tiles.html from database
-	DONE -fix weird &nbsp; issue?
-DONE -implement database searching functionality into tiles
-	DONE -tile ids
-	DONE -tile content filling based on id
-	DONE -updating database based on user-updated tile content
-	-what is the max length of tile content?
-DONE -add first to do tile
--add new functionality to tiles:
-	-scrolled overflow
-	-custom scroll bar
-DONE -add more tiles
--add movement & interaction between tiles
-DONE -populate footer
--implement user accounts & associated tiles
--clean up site design
--animated tile movement?
--reorder tiles by dragging?
