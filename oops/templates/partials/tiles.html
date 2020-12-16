@@ -14,8 +14,11 @@
       <p id="{{ tile.id }}" onclick="tileEditable({{ tile.id }})" oninput="tileUpdate({{ tile.id }})">
           {{ tile.content|safe }}</p>
 
-    </span>
+      </span>
+
   {% endfor %}
-  <span class="plus" onclick="addTile()" onmouseover="hoverEnlarge()">
-    <img src="{% static 'img/add.svg' %}"</span>
+
+  <span id="addbutton" class="plus" onclick="addTile()">
+  <img src="{% static 'img/add.svg' %}"</span>
+
 </div>
